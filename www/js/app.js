@@ -10,10 +10,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
+  if(window.cordova && window.cordova.plugins.Keyboard) {
+    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+  }
+  if(window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
@@ -23,62 +23,61 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
-      url: "/app",
-      abstract: true,
-      templateUrl: "templates/menu.html",
-      controller: 'AppCtrl'
-    })
-
-    .state('app.search', {
-      url: "/search",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/search.html"
-        }
+  .state('app', {
+    url: "/app",
+    abstract: true,
+    templateUrl: "templates/menu.html",
+    controller: 'AppCtrl'
+  })
+  
+  .state('app.beehive', {
+    url: "/beehive",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/beehive.html",
+        controller: 'BeehiveCtrl as beehive'
       }
-    })
-
-    .state('app.browse', {
-      url: "/browse",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/browse.html"
-        }
+    }
+  })
+  .state('app.schedule', {
+    url: "/schedule",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/schedule.html",
+        controller: 'ScheduleCtrl as schedule'
       }
-    })
-     .state('app.inbox', {
-      url: "/inbox",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/inbox.html",
-          controller: 'InboxCtrl as inbox'
-        }
+    }
+  })
+  .state('app.messages', {
+    url: "/messages",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/messages.html",
+        controller: 'MessagesCtrl as messages'
       }
-    })
-    .state('app.playlists', {
-      url: "/playlists",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
-          
-        } 
-        
-
+    }
+  })
+  .state('app.coworkers', {
+    url: "/coworkers",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/coworkers.html",
+        controller: 'CoworkersCtrl as coworkers'
       }
-    })
-
-    .state('app.single', {
-      url: "/playlists/:playlistId",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/playlist.html",
-          controller: 'PlaylistCtrl'
-        }
+    }
+  })
+  .state('app.facebook', {
+    url: "/facebook",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/facebook.html",
+        controller: 'FacebookCtrl as facebook'
       }
-    });
+    }
+  })
+  
+  ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/beehive');
 });
 

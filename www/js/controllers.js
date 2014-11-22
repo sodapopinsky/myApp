@@ -33,20 +33,17 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+
 .controller('InboxCtrl', function($scope) {
   $scope.title = "inbox";
 })
-
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('BeehiveCtrl', function($scope) {
+  $scope.title = "beehive";
+})
+.controller('ScheduleCtrl', function($scope) {
+  $scope.title = "schedule";
+})
+.controller('MessagesCtrl', function($scope) {})
+.controller('CoworkersCtrl', function($scope) {})
+.controller('FacebookCtrl', function($scope) {})
+;
