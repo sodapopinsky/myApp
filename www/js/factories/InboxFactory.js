@@ -21,13 +21,13 @@ angular.module('starter')
 
     exports.getMessages = function () {
       var deferred = $q.defer();
-      return $http.get('json/emails.json')
+      return $http.get('http://atomicbeehive.herokuapp.com/json')
         .success(function (data) {
-          console.log("success");
+          console.log(data);
           exports.messages = data;
           deferred.resolve(data);
         })
-        .error(function (data) {   console.log(data);
+        .error(function (data) {   console.log("error");
           deferred.reject(data);
         });
       return deferred.promise;
