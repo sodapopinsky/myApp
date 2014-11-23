@@ -54,6 +54,7 @@ angular.module('starter.controllers', [])
     $state.go('app.login');
   };
 })
-.controller('CoworkersCtrl', function($scope) {})
+.controller('CoworkersCtrl', function($scope) {   'use strict'; })
+
 .controller('FacebookCtrl', function($scope) {})
 ;

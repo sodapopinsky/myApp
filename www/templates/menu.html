@@ -7,14 +7,15 @@
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" style="background-color:#333;">
+  <!--
     <header class="bar bar-header bar-stable">
       <h1 id="username" class="title" style="text-align:left;" ></h1>
 
     </header>
-
-    <ion-content class="has-header">
-      <ion-list>
+-->
+    <ion-content>
+      <ion-list >
       <!--
         <ion-item nav-clear menu-close ng-click="login()">
           Login
@@ -22,20 +23,20 @@
         -->
 
      
-        <ion-item nav-clear menu-close href="#/app/messages">
-          Messages
+        <ion-item  assertive nav-clear menu-close  href="#/app/messages" style="border: 1px solid #444;">
+           <i class="icon ion-email"></i><span style="margin-left:10px;">Messages</span>
         </ion-item>
 
-        <ion-item nav-clear menu-close href="#/app/coworkers">
-         Co-Workers
+        <ion-item assertive nav-clear menu-close  href="#/app/coworkers" style="border: 1px solid #444;">
+           <i class="icon ion-person-stalker"></i><span style="margin-left:10px;">Co-Workers</span>
         </ion-item>
 
-        <ion-item nav-clear menu-close href="#/app/facebook">
-         Facebook
+        <ion-item nav-clear menu-close href="#/app/facebook" style="border: 1px solid #444;">
+           <i class="icon ion-social-facebook-outline"></i> <span style="margin-left:10px;">Facebook</span>
         </ion-item>
 
-           <ion-item nav-clear menu-close href="#/app/settings">
-        Settings
+           <ion-item nav-clear menu-close href="#/app/settings" style="border: 1px solid #444;">
+         <i class="icon ion-gear-b"></i>  <span style="margin-left:10px;">Settings</span>
         </ion-item>
 
 

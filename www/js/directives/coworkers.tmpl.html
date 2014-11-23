@@ -1,0 +1,32 @@
+<div class="coworkers">
+
+
+
+  <ul class="inbox__list">
+    <li ng-show="!coworkers.messages.length">
+      No messages! Try sending one to a friend.
+    </li> 
+
+    <div class="list">
+    <label class="item item-input">
+    <input  type="text" placeholder="Filter..." ng-model="coworkers.search" 
+      >
+  </label>
+
+
+    <li ng-repeat="message in coworkers.messages | filter:{ name: coworkers.search }">
+
+      
+         <a class="item" href="#/app/profile/{{message.id}}/{{message.name}}">
+  {{ message.name }} 
+  </a>
+
+     
+  
+    </li>
+     </div>
+  </ul>
+
+ 
+</div>
+
