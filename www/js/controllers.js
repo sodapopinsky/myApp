@@ -18,6 +18,7 @@ angular.module('starter.controllers', [])
 
   // Open the login modal
   $scope.login = function() {
+
     $scope.modal.show();
   };
 
@@ -33,17 +34,26 @@ angular.module('starter.controllers', [])
   };
 })
 
-
 .controller('InboxCtrl', function($scope) {
   $scope.title = "inbox";
 })
 .controller('BeehiveCtrl', function($scope) {
-  $scope.title = "beehive";
+
+  $scope.title = "Beehive";
+
+
+
 })
 .controller('ScheduleCtrl', function($scope) {
   $scope.title = "schedule";
 })
 .controller('MessagesCtrl', function($scope) {})
+.controller('SettingsCtrl', function($scope,$state) {
+
+   $scope.doLogout = function() {
+    $state.go('app.login');
+  };
+})
 .controller('CoworkersCtrl', function($scope) {})
 .controller('FacebookCtrl', function($scope) {})
 ;

@@ -39,6 +39,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+  .state('app.login', {
+    url: "/login",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/login.html",
+        controller: 'LoginCtrl as login'
+      }
+    }
+  })
   .state('app.schedule', {
     url: "/schedule",
     views: {
@@ -65,6 +74,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'CoworkersCtrl as coworkers'
       }
     }
+  })  
+  .state('app.settings', {
+    url: "/settings",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/settings.html",
+        controller: 'SettingsCtrl as settings'
+      }
+    }
   })
   .state('app.facebook', {
     url: "/facebook",
@@ -78,6 +96,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/beehive');
+  $urlRouterProvider.otherwise('/app/login');
 });
 
