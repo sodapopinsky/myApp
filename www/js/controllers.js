@@ -47,7 +47,17 @@ angular.module('starter.controllers', [])
 .controller('ScheduleCtrl', function($scope) {
   $scope.title = "schedule";
 })
-.controller('MessagesCtrl', function($scope) {})
+.controller('MessagesCtrl', function($scope,$state,$stateParams) { 'use strict'; 
+$scope.userid = $stateParams.userid;
+$scope.username = $stateParams.username;
+
+ $scope.goToConversation = function(userid,username){
+
+           $state.go('app.conversation', { 'userid':userid,'username':username});
+        };
+
+
+})
 .controller('SettingsCtrl', function($scope,$state) {
 
    $scope.doLogout = function() {

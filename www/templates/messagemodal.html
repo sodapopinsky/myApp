@@ -2,27 +2,32 @@
 
 
   <ion-modal-view>
-    <ion-header-bar>
-      <h1 class="title">Send Message</h1>
+    <ion-header-bar class="modal-header">   
+    <button class="button button-clear button-header" ng-click="closeLogin()">Cancel</button>
+      <h1 class="title modal-h1">Send Message</h1>
         <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-clear button-header" ng-click="sendMessage()">Send</button>
     </div>
     </ion-header-bar>
     <ion-content>
+    <div style="padding:5px;">
       <form ng-submit="sendMessage()">
-      <div class="list">
+    
+      <textarea name="comment" id="comment-textarea" 
+      ng-model="incident.comment" placeholder="say something..." style="padding:5px;height:200px;">
+  </textarea>
       
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Send Message</button>
-        </label>
-      </div>
+       
+    
+ 
     </form>
+    </div>
     </ion-content>
 
 
 
+  
+
 
   </ion-modal-view>
-
-
 

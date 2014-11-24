@@ -7823,5 +7823,13 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   border: 0px;
   background-color: #333; }
 
-.menulist {
-  border: 1px solid #444 !important; }
+.modal-header {
+  background-color: #FFA214; }
+
+.modal-h1 {
+  color: #fff; }
+
+.button-header {
+  color: #fff !important;
+  border: none !important;
+  font-size: 15px !important; }

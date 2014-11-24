@@ -33,4 +33,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
  border:0px;
   background-color: $beehiveDark; }
 
+  .modal-header{
+  background-color: $stable;
+  }
+  .modal-h1{
+  color:#fff;
+  }
+  .button-header{
+  color:#fff !important;
+  border:none !important;
+  font-size:15px !important;
+  }
+
  

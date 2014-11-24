@@ -8,10 +8,15 @@
     </li> 
 
     <div class="list">
+      <div class="list list-inset">
     <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
     <input  type="text" placeholder="Filter..." ng-model="coworkers.search" 
       >
   </label>
+</div>
+
+
 
 
     <li ng-repeat="message in coworkers.messages | filter:{ name: coworkers.search }">

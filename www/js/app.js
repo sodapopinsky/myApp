@@ -83,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'ProfileController'
       }
     }
-  }) 
+  })
   .state('app.settings', {
     url: "/settings",
     views: {
@@ -102,7 +102,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
+    .state('app.conversation', {
+    url: "/conversation?userid&username",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/conversation.html",
+        controller: 'MessagesCtrl as messages',
+         params: ['userid','username']
+      }
+    }
+  })
   ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login');

@@ -1,0 +1,33 @@
+<div class="coworkers">
+
+
+
+  <ul class="inbox__list">
+    <li ng-show="!messages.conversations.length">
+      No messages! Try sending one to a friend.
+    </li> 
+
+    <div class="list">
+
+
+
+
+<ion-list>
+  <ion-item ng-repeat="conversation in messages.conversations"
+        ng-click="goToConversation({{conversation.id}},'{{conversation.name}}');"  >
+
+    
+    <h2>{{conversation.id}}</h2>
+    <p>{{conversation.subject}}</p>
+  
+
+  </ion-item>
+</ion-list>
+
+
+     </div>
+  </ul>
+
+ 
+</div>
+
